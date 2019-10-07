@@ -1,4 +1,4 @@
-DOTNET_SDK_VERSION=$1
+DOTNET_SDK_VERSION=${1:-latest}
 DOCKER_TAG="cassiofariasmachado/dotnet-sonarscanner:$DOTNET_SDK_VERSION"
 
 echo 'Stage 1: Build container'
