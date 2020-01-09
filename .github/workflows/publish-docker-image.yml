@@ -1,0 +1,15 @@
+name: Publish Docker image
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Login Docker Hub
+      run: docker login --username cassiofariasmachado --password ${{ secrets.DockerHubToken }}
+    - name: Publish image
+      run: ./scripts/publish.sh $(git describe --abbrev=0 --tags)
