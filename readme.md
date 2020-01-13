@@ -1,10 +1,10 @@
-# Docker DotNet SonarScanner
+# Docker DotNet SonarScanner [![](https://images.microbadger.com/badges/version/cassiofariasmachado/dotnet-sonarscanner:latest.svg)](dotnet-sonarscanner:latest) [![](https://images.microbadger.com/badges/version/cassiofariasmachado/dotnet-sonarscanner:3.1.svg)](dotnet-sonarscanner:3.1)
 
-A docker image to use with dotnet sonarscanner tool.
+Docker image to help with Sonar analysis of .Net Core codebases. This image uses the [dotnet-sonarscanner tool](https://www.nuget.org/packages/dotnet-sonarscanner/) for .Net Core.
 
 ## Usage
 
-Simple run the following command:
+You can use this image in the following way:
 
 ```bash
 docker run -it -v $(pwd):/source cassiofariasmachado/dotnet-sonarscanner:latest
@@ -13,14 +13,9 @@ dotnet build
 dotnet sonarscanner end
 ```
 
-## Publish
+## Versions
 
-To publish a new version:
-
-```bash
-# The <tag_version> is the version of dotnet sdk and it'll be the tag of the "dotnet-sonarscanner" image
-sh scripts/publish.sh "<tag_version>"
-```
+The versions of this repository follow the same pattern of the images from Microsoft of .NET Core SDK.
 
 ## Related documentation
 
